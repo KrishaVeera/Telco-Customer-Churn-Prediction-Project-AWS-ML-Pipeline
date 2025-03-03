@@ -19,8 +19,6 @@ To preprocess the data, an **AWS Glue Crawler** was used to catalog the dataset.
 - Convert categorical features into structured formats.
 - Save the cleaned dataset back to **S3** in **CSV format**.
 
-![image.png](attachment:91084a2b-fb65-47a3-a3b8-59e9a07f9551:image.png)
-
 **Step 4: Use AWS Glue DataBrew**
 
 AWS Glue DataBrew was used for **data exploration and validation**, allowing for:
@@ -29,13 +27,7 @@ AWS Glue DataBrew was used for **data exploration and validation**, allowing for
 - Validation of data transformations applied in **AWS Glue ETL**.
 - Ensuring the dataset was ready for machine learning.
 
-![image.png](attachment:1456e795-5852-43bf-97aa-0ee0d14a9526:image.png)
-
-![image.png](attachment:170cb07c-1543-49c9-8d50-e8b2eb6cfb14:image.png)
-
 **Step 5: Use AWS SageMaker for Machine Learning**
-
-![image.png](attachment:df74c872-93de-4dc9-a473-3f7c6329fb22:image.png)
 
 ### **Model Training Process**
 
@@ -57,8 +49,6 @@ The jupyter notebook can be found here:
 
 Models were evaluated using **accuracy, precision, recall, and F1-score**.
 
-![image.png](attachment:cc2915d3-1485-4f42-9375-d3c79a021eaf:image.png)
-
 **SMOTE Logistic Regression performed best for detecting churners** with the highest **recall (0.78)**. This means it is best at identifying customers likely to churn.
 **XGBoost provided a balance** between precision and recall, useful for reducing false alarms.
 **Logistic Regression (without SMOTE) had the highest accuracy (0.82)** but missed many churners.
@@ -73,5 +63,3 @@ The confusion matrix from the best model (SMOTE Logistic Regression) shows:
 - **778 true negatives (correctly identified non-churners)**
 
 **Step 7:** **Understanding Insights & Business Recommendations**
-
-![image.png](attachment:ae3eb1d1-d944-4a49-ab78-ce1569d4fec9:image.png)
